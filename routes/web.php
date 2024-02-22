@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get("login","\App\Http\Controllers\UserController@login")->name('login');
+Route::post("login","\App\Http\Controllers\UserController@loginCheck")->name('login');
+
+Route::group(['middleware' => ['auth']], function(){
+    Route::get("loquesea",function(){return 1;})->name("edel");
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
