@@ -4,7 +4,7 @@
         @include('layouts.head')
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             @include('layouts.nav')
         </nav>
         <section class="container mt-4">

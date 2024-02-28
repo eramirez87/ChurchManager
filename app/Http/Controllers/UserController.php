@@ -15,6 +15,7 @@ class UserController extends Controller
     public function index()
     {
         //
+        return "ok";
     }
 
     /**
@@ -78,12 +79,19 @@ class UserController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
  
-            return redirect()->intended('dashboard');
+            return redirect()->route('home');
         }
  
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
         ])->onlyInput('email');
 
+    }
+
+    public function logout(){
+        Auth::logout();
+        Session()->invalidate();
+        Session()->regenerateToken();
+        return redirect()->route('home');
     }
 }
