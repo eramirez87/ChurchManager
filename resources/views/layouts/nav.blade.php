@@ -24,9 +24,9 @@
             <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <span class="material-icons">face</span> {{ Auth::user()->name }}
             </a>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDarkDropdownMenuLink">
-              <li><a class="dropdown-item" href="#">Config</a></li>
-              <li><a class="dropdown-item" href="{{ route('logout') }}">Logout</a></li>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+              <li><a class="dropdown-item text-secondary" href="#">Config</a></li>
+              <li><a class="dropdown-item text-secondary" href="{{ route('logout') }}">Logout</a></li>
             </ul>
           </li>
         </ul>
