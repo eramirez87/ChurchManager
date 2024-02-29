@@ -21,4 +21,4 @@ Route::group(['middleware' => ['auth']], function(){
     Route::resource("user","\App\Http\Controllers\UserController");
 });
 
-Route::get('/', function () { return view('welcome'); })->name('home');
+Route::get('/',"\App\Http\Controllers\UserController@home")->name('home');

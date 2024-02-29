@@ -9,6 +9,14 @@ use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
+    public function home(){
+        if( Auth::user() == null ){
+            return view('welcome');
+        }else{
+            $role = Auth::user()->role;
+        }
+        return view( "homepage.home_{$role}" );
+    }
     /**
      * Display a listing of the resource.
      */

@@ -12,6 +12,9 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Ministry</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Requests</a>
+        </li>
       </ul>
       @endauth
       @guest
