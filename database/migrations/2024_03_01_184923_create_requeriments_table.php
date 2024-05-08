@@ -11,14 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('accounts', function (Blueprint $table) {
+        Schema::create('requeriments', function (Blueprint $table) {
             $table->id();
-            $table->date('dateAplication');
-            $table->string('description');
-            $table->smallInteger('typeAccount');
-            $table->float('amount');
-            $table->bigInteger('requestID')->nullable(true);
-            $table->bigInteger('accountID')->nullable(true);
             $table->timestamps();
         });
     }
@@ -28,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('accounts');
+        Schema::dropIfExists('requeriments');
     }
 };

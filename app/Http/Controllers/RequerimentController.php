@@ -2,19 +2,25 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Acc\Entries;
+use App\Models\Requeriment;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
-class EntriesController extends Controller
+class RequerimentController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $auth = Auth::user();
-        return view( 'AccEntries',compact('auth') );
+        //
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
+    {
+        //
     }
 
     /**
@@ -28,7 +34,15 @@ class EntriesController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Entries $entries)
+    public function show(Requeriment $requeriment)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(Requeriment $requeriment)
     {
         //
     }
@@ -36,7 +50,7 @@ class EntriesController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Entries $entries)
+    public function update(Request $request, Requeriment $requeriment)
     {
         //
     }
@@ -44,7 +58,7 @@ class EntriesController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Entries $entries)
+    public function destroy(Requeriment $requeriment)
     {
         //
     }

@@ -20,7 +20,16 @@ class AccountsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = $request->except('_token');
+        Accounts::create($input);
+        return $input;
+    }
+
+    /**
+     * Show All rows
+    */
+    public function getAll(){
+        return Accounts::get();
     }
 
     /**
