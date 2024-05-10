@@ -32,6 +32,9 @@ const app = Vue.createApp({
         },
         newAcc(){
             let myaccs = this.accs;
+            let self = this;
+            if( !confirm('¿Agregar registro?') )
+                return;
             axios({
                 method: 'post',
                 url: saveApi,
@@ -46,7 +49,13 @@ const app = Vue.createApp({
                 }
               })
               .then(function (r) {
-                myaccs.push(r.data);
+                  self.dateAplication = "";
+                  self.description = "";
+                  self.typeAccount = 1;
+                  self.amount = 0;
+                  self.requestID = "";
+                  self.accountID = "";
+                  myaccs.push(r.data);
               });
         }
     },
